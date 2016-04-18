@@ -12,7 +12,7 @@ System.out.println("여기 왔다감 ㅇㅇ");
 String tokenSecret=request.getParameter("tokenSecret");
 String token=request.getParameter("token");
 session.setAttribute("finish", 1);
-System.out.println("전반전끝 ㅇ tokenSecret2="+tokenSecret);
+System.out.println("전반전끝 ㅇ tokenSecret="+tokenSecret);
 response.sendRedirect("/index.jsp?tokenSecret="+tokenSecret+"&token="+token);
 %>
 </body>

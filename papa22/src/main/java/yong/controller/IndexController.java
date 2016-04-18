@@ -21,7 +21,7 @@ public class IndexController {
 			mav.addObject("msg", "Spring FrameWork MVC");
 			mav.addObject("tokenSecret", dto.getTokenSecret());
 			mav.addObject("token", dto.getToken());
-			mav.setViewName("index2");
+			mav.setViewName("/index2");
 			return mav;
 			
 		}
@@ -34,7 +34,7 @@ public class IndexController {
 			mav.addObject("msg", "Spring FrameWork MVC");
 			mav.addObject("tokenSecret", dto.getTokenSecret());
 			mav.addObject("token", dto.getToken());
-			mav.setViewName("index");
+			mav.setViewName("/index");
 			return mav;
 			
 		}
