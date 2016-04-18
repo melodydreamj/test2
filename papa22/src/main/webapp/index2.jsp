@@ -13,7 +13,7 @@ String tokenSecret=request.getParameter("tokenSecret");
 String token=request.getParameter("token");
 session.setAttribute("finish", 1);
 System.out.println("전반전끝 ㅇ tokenSecret2="+tokenSecret);
-response.sendRedirect("/index.jsp?tokenSecret2="+tokenSecret+"&token2="+token);
+response.sendRedirect("/index.jsp?tokenSecret="+tokenSecret+"&token="+token);
 %>
 </body>
 </html>

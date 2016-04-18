@@ -19,6 +19,8 @@ public class IndexController {
 			int result = indexDAO.setDB(dto);
 			ModelAndView mav=new ModelAndView();
 			mav.addObject("msg", "Spring FrameWork MVC");
+			mav.addObject("tokenSecret", dto.getTokenSecret());
+			mav.addObject("token", dto.getToken());
 			mav.setViewName("index2");
 			return mav;
 			
@@ -30,6 +32,8 @@ public class IndexController {
 			int result = indexDAO.setDB(dto);
 			ModelAndView mav=new ModelAndView();
 			mav.addObject("msg", "Spring FrameWork MVC");
+			mav.addObject("tokenSecret", dto.getTokenSecret());
+			mav.addObject("token", dto.getToken());
 			mav.setViewName("index");
 			return mav;
 			

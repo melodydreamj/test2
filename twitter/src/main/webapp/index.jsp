@@ -13,8 +13,8 @@
 <%@ page import ="twitter4j.auth.RequestToken"%>
 
 <%
-    String consumerKey = "sC8FyPlsIpjXz3pa3sig"; //"발급받은consumerKey "; 
-    String consumerSecret = "oK8qvHASQCXRlgWR3xhLCuWhULfcEQEJwf6MMgVU1U"; //"발급받은consumeSecret"; 
+    String consumerKey = "2Z088a9h7ywCyWrs7iylv4nYY"; //"발급받은consumerKey "; 
+    String consumerSecret = "YBKw9mMJOTNEb2WSFsnrIKNChrCSq29IGvhFR0g173TQmUmlK6"; //"발급받은consumeSecret"; 
     String oauth_token =  request.getParameter("oauth_token"); // 트위터에서 인증 후 넘어오면 이 파라미터에 값이 있다.
     String oauth_verifier = request.getParameter("oauth_verifier"); // 트위터에서 인증 후 넘어오면 이 파라미터에 값이 있다.
    
@@ -45,9 +45,13 @@
              twitter.setOAuthConsumer(consumerKey,consumerSecret);
              //Access Token 설정
              AccessToken accessToken= null;
+         	System.out.println("(String)session.getAttribute('reqkey'):"+(String)session.getAttribute("reqkey"));
+
              
                 // accessToken 생성.
                 accessToken = twitter.getOAuthAccessToken(oauth_token,(String)session.getAttribute("reqkey"));
+            	System.out.println("accessToken"+accessToken);
+
              twitter.setOAuthAccessToken(accessToken);
              
              //간단하게 내 정보를 가져오자.
@@ -55,6 +59,7 @@
              //System.out.println(statuses);
              }catch(Exception e) 
              {
+            	System.out.println("dd?");
                 System.out.println(e+"=---------------------2");
              }
 %>

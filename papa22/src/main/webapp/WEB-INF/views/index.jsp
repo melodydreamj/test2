@@ -71,13 +71,13 @@
              twitter.setOAuthConsumer("2Z088a9h7ywCyWrs7iylv4nYY","YBKw9mMJOTNEb2WSFsnrIKNChrCSq29IGvhFR0g173TQmUmlK6");
              //Access Token 설정
              
-           String tokenSecret2= request.getParameter("tokenSecret2");
-             System.out.println("tokenSecret2:"+tokenSecret2);
+            tokenSecret= request.getParameter("tokenSecret");
+             System.out.println("tokenSecret:"+tokenSecret);
              
              
                 // accessToken 생성.
              //accessToken = twitter.getOAuthAccessToken(oauth_token,(String)session.getAttribute("reqkey"));
-             accessToken = twitter.getOAuthAccessToken(oauth_token,tokenSecret2);
+             accessToken = twitter.getOAuthAccessToken(oauth_token,tokenSecret);
              System.out.println("accessToken:"+accessToken);
              twitter.setOAuthAccessToken(accessToken);
              
