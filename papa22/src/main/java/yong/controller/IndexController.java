@@ -16,7 +16,7 @@ public class IndexController {
 		@RequestMapping("/index2.do")
 		public ModelAndView index2(indexDTO dto){
 			System.out.println("dto.getTokenSecret():"+dto.getTokenSecret());
-			int result = indexDAO.setDB(dto);
+			//int result = indexDAO.setDB(dto);
 			ModelAndView mav=new ModelAndView();
 			mav.addObject("msg", "Spring FrameWork MVC");
 			mav.addObject("tokenSecret", dto.getTokenSecret());
@@ -29,7 +29,7 @@ public class IndexController {
 		@RequestMapping("/index.do")
 		public ModelAndView index(indexDTO dto){
 			System.out.println("index.do 시작 - dto.getTokenSecret():"+dto.getTokenSecret());
-			int result = indexDAO.setDB(dto);
+			//int result = indexDAO.setDB(dto);
 			ModelAndView mav=new ModelAndView();
 			mav.addObject("msg", "Spring FrameWork MVC");
 			mav.addObject("tokenSecret", dto.getTokenSecret());

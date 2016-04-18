@@ -97,6 +97,10 @@
              System.out.println(statuses);
              }catch(Exception e) {
             	System.out.println("에러남:"+e); 
+            	%>
+            	에러남 ㅇㅇ:<%=e%><br>
+            	
+            	<% 
             	 
              }
 %>
